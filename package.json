@@ -1,0 +1,22 @@
+{
+  "name": "docker-compose-scale-example",
+  "version": "0.0.1",
+  "description": "Simple Express app inside Docker Compose",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Oleg Fomin",
+    "email": "ofstudio@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/ofstudio/docker-compose-scale-example.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}

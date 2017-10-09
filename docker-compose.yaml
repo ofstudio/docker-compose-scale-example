@@ -1,0 +1,23 @@
+version: '2.3'
+# Note: `services.app.scale` available only version 2.x
+# In version 3.x scale option will produce error:
+# "Unsupported config option for services.app: 'scale'"
+# You can use `docker-compose up --scale app=3`
+# instead of `scale` field for version 3.x compose files
+
+services:
+
+  app:
+    build: .
+    image: "scale-app-example"
+    scale: 3
+
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - 8000:80
+    depends_on:
+      - app
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./var/log/nginx:/var/log/nginx
