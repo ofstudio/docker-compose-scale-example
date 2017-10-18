@@ -11,4 +11,4 @@ RUN npm install
 COPY . .
 
 USER node
-CMD [ "npm", "start", "--production" ]
+CMD [ "node", "index" ]
